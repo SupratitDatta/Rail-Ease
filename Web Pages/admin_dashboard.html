@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <style>
+        body {
+            font-family: "Lucida Console", "Courier New", monospace;
+            background-color: #222;
+            color: #fff;
+            text-align: center;
+            padding: 10vh;
+            padding-top: 5vh;
+            height: auto;
+            background-image: url("../Asset/admin_dashboardPic.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            transition: background-color 0.5s;
+            margin: 0;
+        }
+
+        body:hover {
+            background-color: #333;
+        }
+
+        .heading {
+            font-size: 40px;
+            width: fit-content;
+            color: #007bff;
+            background-color: rgba(255, 255, 255, 0.8);
+            margin: 1vh auto 1vh auto;
+            padding: 8px 8px 5px 8px;
+            border-radius: 5px;
+        }
+
+        #admin_panel_section {
+            display: flex;
+        }
+
+        .add,
+        .delete,
+        .modify {
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            padding: 20px 60px 20px 60px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+            transition: background-color 0.5s;
+            margin: auto auto auto auto;
+            max-width: fit-content;
+        }
+
+        .add:hover,
+        .delete:hover,
+        .modify:hover {
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+
+        #admin_panel_section h2 {
+            color: #fff;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        #admin_panel_section form {
+            margin-top: 20px;
+        }
+
+        #admin_panel_section label {
+            display: block;
+            margin-bottom: 5px;
+            color: #ccc;
+            font-size: 18px;
+        }
+
+        input::placeholder {
+            color: white;
+            opacity: 1;
+        }
+
+        #admin_panel_section input[type="text"],
+        #admin_panel_section input[type="submit"],
+        #admin_panel_section input[type="time"],
+        #admin_panel_section input[type="number"] {
+            width: 90%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #444;
+            color: #fff;
+            transition: background-color 0.3s ease;
+            font-size: 16px;
+        }
+
+        #admin_panel_section input[type="text"]:focus,
+        #admin_panel_section input[type="submit"]:hover,
+        #admin_panel_section input[type="time"]:focus,
+        #admin_panel_section input[type="number"]:focus {
+            background-color: #555;
+        }
+
+        #admin_panel_section input[type="submit"] {
+            cursor: pointer;
+            background-color: #007bff;
+            font-weight: bold;
+            border: 2px solid #007bff;
+            margin: 4vh auto 2vh auto;
+        }
+
+        #admin_panel_section input[type="submit"]:hover {
+            background-color: #0056b3;
+            border: 2px solid #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="heading">Admin Panel</h1>
+    <div id="admin_panel_section">
+        <div class="add">
+            <h2>ADD TRAIN</h2>
+            <form action="../PHP Files/add_train.php" method="post">
+                <!-- <label for="TrainName">Train Name:</label> -->
+                <input type="text" id="TrainName" name="TrainName" placeholder="Train Name" required><br>
+                <!-- <label for="Destination">Destination:</label> -->
+                <input type="text" id="Destination" name="Destination" placeholder="Destination" required><br>
+                <!-- <label for="Source">Source:</label> -->
+                <input type="text" id="Source" name="Source" placeholder="Departure" required><br>
+                <!-- <label for="Distance">Distance (km):</label> -->
+                <input type="number" id="Distance" name="Distance" placeholder="Distance (km)" required><br>
+                <label for="DepartureTime">Departure Time:</label>
+                <input type="time" id="DepartureTime" name="DepartureTime" required><br>
+                <label for="ArrivalTime">Arrival Time:</label>
+                <input type="time" id="ArrivalTime" name="ArrivalTime" required><br>
+                <input type="submit" value="Add Train">
+            </form>
+        </div>
+
+        <div class="modify">
+            <h2>MODIFY TRAIN</h2>
+            <form action="../PHP Files/modify_train.php" method="post">
+                <!-- <label for="train_id_modify">Train ID:</label> -->
+                <input type="text" id="train_id_modify" name="train_id_modify" placeholder="Train ID" required><br>
+                <!-- <label for="new_destination">New Destination:</label> -->
+                <input type="text" id="new_destination" name="new_destination" placeholder="New Destination"
+                    required><br>
+                <input type="submit" value="Modify Train Details">
+            </form>
+        </div>
+
+        <div class="delete">
+            <h2>DELETE TRAIN</h2>
+            <form action="../PHP Files/delete_train.php" method="post">
+                <!-- <label for="TrainID">Train ID:</label> -->
+                <input type="text" id="TrainID" name="TrainID" placeholder="Train ID" required><br>
+                <input type="submit" value="Delete Train">
+            </form>
+        </div>
+
+    </div>
+</body>
+
+</html>
