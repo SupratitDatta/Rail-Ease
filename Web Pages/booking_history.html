@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" href="../Asset/logo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Booking History</title>
     <style>
@@ -28,22 +29,16 @@
         #history_section {
             width: 80%;
             margin: 0 auto;
-            /* Center the booking history section horizontally */
             background-color: rgba(255, 255, 255, 0.1);
-            /* Semi-transparent white background */
             padding: 20px;
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
-            /* White box shadow */
             transition: all 0.3s ease;
-            /* Smooth transition */
         }
 
         #history_section:hover {
             background-color: rgba(255, 255, 255, 0.2);
-            /* Darker semi-transparent white background on hover */
             box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
-            /* Lighter white box shadow on hover */
         }
 
         .booking_history_body {
@@ -54,7 +49,6 @@
             width: 100%;
             border-collapse: collapse;
             background-color: rgba(255, 255, 255, 0.1);
-            /* Semi-transparent white background for table */
             margin-top: 20px;
         }
 
@@ -74,13 +68,12 @@
 
         tbody tr:nth-child(even) {
             background-color: rgba(255, 255, 255, 0.1);
-            /* Semi-transparent white background for even rows */
         }
 
         tbody tr:hover {
             background-color: rgba(255, 255, 255, 0.2);
-            /* Darker semi-transparent white background on row hover */
         }
+
         button {
             padding: 10px 20px;
             background-color: #007bff;
@@ -102,7 +95,6 @@
 <body>
     <h1 class="heading">BOOKING HISTORY</h1>
 
-    <!-- Booking History Section -->
     <div id="history_section">
 
         <table id="booking_history_table">
@@ -121,7 +113,6 @@
                 </tr>
             </thead>
             <tbody id="booking_history_body">
-                <!-- Table body will be populated dynamically using JavaScript -->
             </tbody>
         </table>
     </div>

@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" href="../Asset/logo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cancel Ticket</title>
     <style>
         body {
             font-family: "Lucida Console", "Courier New", monospace;
-            background-color: #222; 
-            color: #fff; 
-            text-align: center; 
+            background-color: #222;
+            color: #fff;
+            text-align: center;
             padding: 20px;
             padding-top: 10vh;
-            background-image: url("../Asset/bookingHistoryPic.jpg");
+            background-image: url("../Asset/cancelTicket.avif");
             background-repeat: no-repeat;
             background-size: cover;
         }
@@ -24,17 +26,17 @@
 
         #cancellation_section {
             width: 300px;
-            margin: 0 auto; /* Center the cancellation section horizontally */
-            background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white background */
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.1);
             padding: 20px;
             border-radius: 5px;
-            box-shadow: 0 0 10px rgba(255, 255, 255, 0.3); /* White box shadow */
-            transition: all 0.3s ease; /* Smooth transition */
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+            transition: all 0.3s ease;
         }
 
         #cancellation_section:hover {
-            background-color: rgba(255, 255, 255, 0.2); /* Darker semi-transparent white background on hover */
-            box-shadow: 0 0 15px rgba(255, 255, 255, 0.5); /* Lighter white box shadow on hover */
+            background-color: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
         }
 
         form {
@@ -54,8 +56,8 @@
             margin-bottom: 50px;
             border: none;
             border-radius: 5px;
-            background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white background */
-            color: #fff; /* Light text color */
+            background-color: rgba(255, 255, 255, 0.1);
+            color: #fff;
         }
 
         input[type="submit"] {
@@ -63,24 +65,24 @@
             padding: 10px;
             border: none;
             border-radius: 5px;
-            background-color: #007bff; /* Primary color for submit button */
-            color: #fff; /* Light text color */
+            background-color: #007bff;
+            color: #fff;
             cursor: pointer;
-            transition: background-color 0.3s; /* Smooth transition */
+            transition: background-color 0.3s;
             transition: all 0.3s ease-in;
             display: inline-block;
         }
 
         input[type="submit"]:hover {
-            background-color: #0056b3; 
+            background-color: #0056b3;
             transform: translateY(-10px);
         }
     </style>
 </head>
+
 <body>
     <h1 class="heading">Cancel Ticket</h1>
 
-    <!-- Ticket Cancellation Section -->
     <div id="cancellation_section">
         <form action="../PHP Files/cancel_ticket.php" method="post">
             <label for="cancel_ticket_id">Ticket ID:</label>
@@ -89,4 +91,5 @@
         </form>
     </div>
 </body>
+
 </html>

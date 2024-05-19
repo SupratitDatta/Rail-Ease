@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="../Asset/logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login/Signup</title>
+    <link rel="stylesheet" href="../Styles/admin_login-signup.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="backbox">
+            <div class="loginMsg">
+                <div class="textcontent">
+                    <p class="title">Don't have an account?</p>
+                    <p>Sign up to be an admin.</p>
+                    <button id="switch1">Sign Up</button>
+                </div>
+            </div>
+            <div class="signupMsg visibility">
+                <div class="textcontent">
+                    <p class="title">Have an account?</p>
+                    <p>Log in to modify in the panel.</p>
+                    <button id="switch2">LOG IN</button>
+                </div>
+            </div>
+        </div>
+        <div class="frontbox">
+            <div class="login">
+                <h2>LOG IN</h2>
+                <form class="inputbox" action="../PHP Files/admin_login.php" method="post">
+                    <input type="text" id="admin_username" name="admin_username" placeholder="  USERNAME" required><br>
+                    <input type="password" id="admin_password" name="admin_password" placeholder="  PASSWORD"
+                        required><br>
+                    <button type="submit">LOG IN</button>
+                </form>
+            </div>
+            <div class="signup hide">
+                <h2>SIGN UP</h2>
+                <form class="inputbox" action="../PHP Files/admin_registration.php" method="post">
+                    <input type="email" id="admin_email" name="admin_email" placeholder="  EMAIL" required><br>
+                    <input type="text" id="admin_id" name="admin_id" placeholder="  ID" required><br>
+                    <input type="text" id="admin_username" name="admin_username" placeholder="  USERNAME" required><br>
+                    <input type="password" id="admin_password" name="admin_password" placeholder="  PASSWORD"
+                        required><br>
+                    <button type="submit">SIGN UP</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        var $loginMsg = $('.loginMsg'),
+            $login = $('.login'),
+            $signupMsg = $('.signupMsg'),
+            $signup = $('.signup'),
+            $frontbox = $('.frontbox');
+
+        $('#switch1').on('click', function () {
+            $loginMsg.toggleClass("visibility");
+            $frontbox.addClass("moving");
+            $signupMsg.toggleClass("visibility");
+
+            $signup.toggleClass('hide');
+            $login.toggleClass('hide');
+        });
+
+        $('#switch2').on('click', function () {
+            $loginMsg.toggleClass("visibility");
+            $frontbox.removeClass("moving");
+            $signupMsg.toggleClass("visibility");
+
+            $signup.toggleClass('hide');
+            $login.toggleClass('hide');
+        });
+    </script>
+</body>
+
+</html>

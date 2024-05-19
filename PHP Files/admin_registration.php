@@ -23,7 +23,7 @@
             echo "<script>
                     setTimeout(function() {
                         alert('Admin with this email already exists');
-                        window.location.href = '../Web Pages/admin_registration.html';
+                        window.location.href = '../Web Pages/admin_login-signup.html';
                     }, 100); // Delay in milliseconds
                 </script>";
         } 
@@ -33,7 +33,7 @@
                 echo "<script>
                     setTimeout(function() {
                         alert('Admin registration successful');
-                        window.location.href = 'index.php';
+                        window.location.href = './PHP Files/admin_panel.php';
                     }, 100); // Delay in milliseconds
                 </script>";
             } else {

@@ -1,21 +1,21 @@
 <?php
-$servername = "localhost";
-$port = 3306;
-$username = "supra";
-$password = "supra@12345";
-$database = "railway";
+    $servername = "localhost";
+    $port = 3306;
+    $username = "supra";
+    $password = "supra@12345";
+    $database = "railway";
 
-$conn = new mysqli($servername . ':' . $port, $username, $password, $database);
+    $conn = new mysqli($servername . ':' . $port, $username, $password, $database);
 
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-session_start();
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
+    session_start();
 
-if (!isset($_SESSION['username'])) {
-    header("Location: user_login.php");
-    exit();
-}
+    if (!isset($_SESSION['username'])) {
+        header("Location: user_login.php");
+        exit();
+    }
 ?>
 
 <!DOCTYPE html>
@@ -23,12 +23,13 @@ if (!isset($_SESSION['username'])) {
 
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" href="../Asset/logo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
+    <title>User Dashboard</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-image: url('../Asset/user_dashboardPic.jpg');
+            background-image: url('../Asset/user_DashboardPic.jpg');
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
@@ -94,11 +95,6 @@ if (!isset($_SESSION['username'])) {
             </form>
         </div>
     </div>
-    <script>
-        // setTimeout(function() {
-        //     window.location.href = "../Web Pages/book_ticket.html";
-        // }, 5000); 
-    </script>
 </body>
 
 </html>

@@ -22,7 +22,7 @@
             echo "<script>
                     setTimeout(function() {
                         alert('User already exists, Please Log In');
-                        window.location.href = '../Web Pages/user_registration.html';
+                        window.location.href = '../Web Pages/login-signup.html';
                     }, 100); // Delay in milliseconds
                 </script>";
         } 
@@ -32,7 +32,7 @@
                 echo "<script>
                     setTimeout(function() {
                         alert('User registered successfully');
-                        window.location.href = 'index.php';
+                        window.location.href = 'user_dashboard.php';
                     }, 100); // Delay in milliseconds
                 </script>";
             } 

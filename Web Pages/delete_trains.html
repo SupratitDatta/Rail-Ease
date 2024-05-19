@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="../Asset/logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Train</title>
+    <link rel="stylesheet" href="../Styles/admin_dashboard.css">
+</head>
+
+<body>
+    <header role="banner">
+        <h1>ADMIN PANEL</h1>
+        <ul class="utilities">
+            <br>
+            <li class="users"><a href="../PHP Files/admin_panel.php">My Account</a></li>
+            <li class="logout warn"><a href="./admin_login-signup.html">Log Out</a></li>
+        </ul>
+    </header>
+
+    <nav role='navigation'>
+        <ul class="main">
+            <li class="dashboard"><a href="../PHP Files/admin_panel.php">Dashboard</a></li>
+            <li class="write"><a href="./add_trains.html">Add Trains</a></li>
+            <li class="edit"><a href="./modify_trains.html">Modify Trains</a></li>
+            <li class="comments"><a href="#">Delete Trains</a></li>
+            <li class="users"><a href="#">Manage Users</a></li>
+        </ul>
+    </nav>
+
+    <main role="main">
+        <section class="panel important">
+            <div class="container">
+                <h2>DELETE TRAIN</h2>
+                <form action="../PHP Files/delete_train.php" method="post">
+                    <input type="text" id="TrainID" name="TrainID" placeholder="Train ID" required>
+                    <input type="submit" value="Delete Train">
+                </form>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="../Asset/logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Train</title>
+    <link rel="stylesheet" href="../Styles/admin_dashboard.css">
+</head>
+
+<body>
+    <header role="banner">
+        <h1>ADMIN PANEL</h1>
+        <ul class="utilities">
+            <br>
+            <li class="users"><a href="../PHP Files/admin_panel.php">My Account</a></li>
+            <li class="logout warn"><a href="./admin_login-signup.html">Log Out</a></li>
+        </ul>
+    </header>
+
+    <nav role='navigation'>
+        <ul class="main">
+            <li class="dashboard"><a href="../PHP Files/admin_panel.php">Dashboard</a></li>
+            <li class="write"><a href="#">Add Trains</a></li>
+            <li class="edit"><a href="./modify_trains.html">Modify Trains</a></li>
+            <li class="comments"><a href="./delete_trains.html">Delete Trains</a></li>
+            <li class="users"><a href="#">Manage Users</a></li>
+        </ul>
+    </nav>
+
+    <main role="main">
+        <section class="panel important">
+            <div class="container">
+                <h2>ADD TRAIN</h2>
+                <form action="../PHP Files/add_train.php" method="post">
+                    <input type="text" id="TrainName" name="TrainName" placeholder="Train Name" required>
+                    <input type="text" id="Destination" name="Destination" placeholder="Destination" required>
+                    <input type="text" id="Source" name="Source" placeholder="Departure" required>
+                    <input type="number" id="Distance" name="Distance" placeholder="Distance (km)" required>
+                    <label for="DepartureTime">Departure Time:</label>
+                    <input type="time" id="DepartureTime" name="DepartureTime" required>
+                    <label for="ArrivalTime">Arrival Time:</label>
+                    <input type="time" id="ArrivalTime" name="ArrivalTime" required>
+                    <input type="submit" value="Add Train">
+                </form>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

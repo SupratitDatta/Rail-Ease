@@ -26,7 +26,7 @@
             echo "<script>
                     setTimeout(function() {
                         alert('Train added successfully');
-                        window.location.href = '../Web Pages/admin_dashboard.html';
+                        window.location.href = './admin_panel.php';
                     }, 100); // Delay in milliseconds
                 </script>";
         } 

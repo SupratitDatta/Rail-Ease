@@ -1,0 +1,126 @@
+body {
+    padding: 5vh 30vw 5vh 30vw;
+    background-color: #37404a;
+}
+.container{
+    padding: 30px 60px 30px 60px;
+    background: rgba(255, 255, 255, 0.1); 
+    backdrop-filter: blur(10px) saturate(180%);
+    -webkit-backdrop-filter: blur(10px) saturate(180%);
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.3); 
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.2em;
+    font-weight: 300;
+    color: #85ffc7;
+    text-transform: uppercase;
+}
+p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.1em;
+    font-weight: 300;
+    color: #fff;
+}
+.header{
+    text-align: center;
+    margin-bottom: 10%;
+}
+#survey-form label{
+    display: block;
+    margin-bottom: 2%;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.1em;
+    font-weight: 300;
+    color: #fff;
+    letter-spacing: 0.5px;
+}
+#survey-form input, #survey-form select {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    outline: none;
+    border: 2px solid #333;
+}
+#survey-form input {
+    margin-top: 1.5%;
+    padding: 0 0 5px 0;
+    background: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #fff;
+    font-size: 1.1em;
+    font-weight: 300;
+    color: #85ffc7;
+}
+#survey-form input:focus {
+    border-color: #85ffc7;
+}
+#survey-form [type=number]::-webkit-inner-spin-button, #survey-form [type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0;
+}
+#survey-form select {
+    height: 40px;
+    padding-left: 5px;
+    background-color: #37404a;
+    border: 2px solid #fff;
+    color: #85ffc7;
+}
+#survey-form select option {
+    padding: 5px 10px 10px;
+    font-weight: 300;
+    cursor: pointer;
+}
+#survey-form select option:hover {
+    background-color: #85ffc7;
+}
+#survey-form .btn {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    margin: 3% 0 0 0;
+    height: 45px;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+    border: 3px solid #85ffc7;
+    border-radius: 0;
+    font-weight: 500;
+    font-size: 1.2em;
+    color: #85ffc7;
+    text-align: center;
+    background: none;
+    transition: color 0.25s ease;
+}
+#survey-form .btn:after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #85ffc7;
+    transform-origin: left;
+    transition: width 0.5s ease;
+    z-index: -1;
+}
+#survey-form .btn:hover {
+    color: #37404a;
+}
+#survey-form .btn:hover:after {
+    width: 100%;
+}
+#survey-form div {
+    margin: 5vh 0 10vh 0;
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        padding: 8% 0;
+   }
+}

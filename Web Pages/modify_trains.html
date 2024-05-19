@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="../Asset/logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modify Train</title>
+    <link rel="stylesheet" href="../Styles/admin_dashboard.css">
+</head>
+
+<body>
+    <header role="banner">
+        <h1>ADMIN PANEL</h1>
+        <ul class="utilities">
+            <br>
+            <li class="users"><a href="../PHP Files/admin_panel.php">My Account</a></li>
+            <li class="logout warn"><a href="./admin_login-signup.html">Log Out</a></li>
+        </ul>
+    </header>
+
+    <nav role='navigation'>
+        <ul class="main">
+            <li class="dashboard"><a href="../PHP Files/admin_panel.php">Dashboard</a></li>
+            <li class="write"><a href="./add_trains.html">Add Trains</a></li>
+            <li class="edit"><a href="#">Modify Trains</a></li>
+            <li class="comments"><a href="./delete_trains.html">Delete Trains</a></li>
+            <li class="users"><a href="#">Manage Users</a></li>
+        </ul>
+    </nav>
+
+    <main role="main">
+        <section class="panel important">
+            <div class="container">
+                <h2>MODIFY TRAIN</h2>
+                <form action="../PHP Files/modify_train.php" method="post">
+                    <input type="text" id="train_id_modify" name="train_id_modify" placeholder="Train ID" required>
+                    <input type="text" id="new_destination" name="new_destination" placeholder="New Destination"
+                        required><br>
+                    <input type="submit" value="Modify Train Details">
+                </form>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

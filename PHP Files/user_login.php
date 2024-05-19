@@ -27,7 +27,7 @@
             echo "<script>
                     setTimeout(function() {
                         alert('Invalid username or password');
-                        window.location.href = '../Web Pages/user_login.html';
+                        window.location.href = '../Web Pages/login-signup.html';
                     }, 100); // Delay in milliseconds
                 </script>";
         }

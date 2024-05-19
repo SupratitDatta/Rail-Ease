@@ -1,0 +1,181 @@
+@import url("https://fonts.cdnfonts.com/css/one-piece");
+@import url(//db.onlinewebfonts.com/c/c1f81144897fc5acffc67de8febd9690?family=Saiyan+Sans);
+
+@media (min-aspect-ratio: 16/9) {
+    video {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-aspect-ratio: 16/9) {
+    video {
+        width: auto;
+        height: 100%;
+    }
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 30px;
+    padding-top: 5vh;
+    height: auto;
+    margin: 0;
+    color: #fff;
+    text-align: center;
+    animation: changeBackground 30s infinite;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.glass_panel {
+    background: rgba(255, 255, 255, 0.31);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4.6px);
+    -webkit-backdrop-filter: blur(4.6px);
+    border: 1px solid rgba(255, 255, 255, 0.37);
+    height: auto;
+}
+
+.mt-5 {
+    margin-top: 7rem !important;
+}
+
+.nav-item {
+    font-weight: 700;
+}
+
+.heading {
+    font-size: 50px;
+    margin-bottom: 2vh;
+    color: black;
+    text-align: center;
+    font-family: "Times New Roman", Times, serif;
+}
+
+.main ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.main li {
+    margin: 10px;
+}
+
+.main a {
+    text-decoration: none;
+    color: black;
+    padding: 5px 20px;
+    margin: 10px;
+    border: 2px solid black;
+    border-radius: 5px;
+    transition: all 0.3s ease-in;
+    display: inline-block;
+}
+
+.main a:hover {
+    background-color: skyblue;
+    color: #222;
+    transition: 0.25s all ease-in;
+}
+.user:hover{
+    transform: translateX(-10px);
+}
+
+.admin:hover{
+    transform: translateX(10px);
+}
+
+h2 {
+    color: black;
+    margin-left: 10px;
+    text-align: center;
+}
+
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+th,
+td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    background-color: transparent;
+    color: black;
+}
+
+th {
+    background-color: rgba(0, 123, 255, 0.7);
+}
+
+tr:nth-child(even) {
+    background-color: rgba(242, 242, 242, 0.7);
+}
+
+tr:hover {
+    background-color: rgba(221, 221, 221, 0.7);
+}
+
+.btn-primary {
+    background: #98e6dd;
+    color: white;
+    border: #ecb0cb;
+    border: 2px solid #ecb0cb;
+    box-shadow: 0 4px 30px rgb(0 0 0 / 10%);
+    transition: 0.25s all ease-in;
+}
+
+.btn-outline-success {
+    background: #ecb0cb;
+    color: white;
+    border: 2px solid #ecb0cb;
+    box-shadow: 0 4px 30px rgb(0 0 0 / 10%);
+}
+
+.login-btn {
+    background-color: rgb(10, 10, 10, 0.5);
+    color: white;
+    padding: 2px 13px 2px 13px;
+    border-radius: 5px;
+    border: 2px solid #fff;
+    box-shadow: 0 4px 30px rgb(0 0 0 / 10%);
+    text-decoration: none;
+    transition: 0.25s all ease-in;
+}
+
+.login-btn:hover {
+    background-color: skyblue;
+    color: black;
+    border: 2px solid black;
+}
+
+.site-icon {
+    height: 50px;
+    width: auto;
+}
+
+video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+}
+
+@media(max-width: 600px) {
+    .glass_panel {
+        height: audio !important;
+    }
+}

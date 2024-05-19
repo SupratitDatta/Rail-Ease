@@ -1,108 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" href="../Asset/logo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book Ticket</title>
-    <style>
-        body {
-            font-family: "Lucida Console", "Courier New", monospace;
-            background-color: #222; 
-            color: #fff; 
-            text-align: center; 
-            padding: 20px;
-            padding-top: 5vh;
-            height: auto;
-            background-image: url("../Asset//bookTicketPic.jpg");
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-
-        .heading {
-            font-size: 36px;
-            margin-bottom: 20px;
-        }
-
-        #booking_section {
-            width: 300px;
-            margin: 0 auto; 
-            background-color: rgba(255, 255, 255, 0.1); 
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(255, 255, 255, 0.3); 
-            transition: all 0.3s ease; 
-        }
-
-        #booking_section:hover {
-            background-color: rgba(255, 255, 255, 0.2); 
-            box-shadow: 0 0 15px rgba(255, 255, 255, 0.5); 
-        }
-
-        form {
-            margin-top: 20px;
-            margin-right:10px;
-        }
-
-        label {
-            display: block;
-            margin-bottom: 10px;
-            font-size: 18px;
-        }
-
-        input[type="text"],
-        input[type="date"],
-        input[type="number"],#ticket_type {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 10px;
-            border: none;
-            border-radius: 5px;
-            background-color: rgba(255, 255, 255, 0.1); 
-            color: #fff; 
-        }
-        #ticket_type {
-            color: black;
-            font-weight: 800;
-        }
-
-        input[type="submit"] {
-            width: 100%;
-            padding: 10px;
-            margin-top: 30px;
-            border: none;
-            border-radius: 5px;
-            background-color: #007bff; 
-            color: #fff; 
-            cursor: pointer;
-            transition: background-color 0.3s; 
-        }
-
-        input[type="submit"]:hover {
-            background-color: #0056b3; 
-        }
-    </style>
+    <link rel="stylesheet" href="../Styles/book_ticket.css">
 </head>
-<body>
-    <h1 class="heading">BOOK TICKET</h1>
 
-    <div id="booking_section">
-        <form action="../PHP Files/book_ticket.php" method="post">
-            <label for="departure">Departure:</label>
-            <input type="text" id="departure" name="departure" required><br>
-            <label for="destination">Destination:</label>
-            <input type="text" id="destination" name="destination" required><br>
-            <label for="date">Date:</label>
-            <input type="date" id="date" name="date" required><br>
-            <label for="train_id">Train ID:</label>
-            <input type="number" id="train_id" name="train_id" required><br>
-            <label for="ticket_type">Ticket Type:</label>
-            <select id="ticket_type" name="ticket_type" required>
-                <option value="First-Class">First Class</option>
-                <option value="Second-Class">Second Class</option>
-                <option value="General">General</option>
-            </select><br>
-            <input type="submit" value="Book Ticket">
-        </form>
-    </div>
+<body>
+    <main id="main" class="container">
+        <div class="row">
+            <div class="col-xs-12 col-lg-offset-3 col-lg-6">
+                <div class="header">
+                    <h1 id="title">RAIL EASE</h1>
+                    <p id="description" class="description" class="text-center">Book Your Train Ticket Here</p>
+                </div>
+                <form method="post" action="../PHP Files/book_ticket.php" id="survey-form" name="survey-form">
+                    <div>
+                        <label for="departure" id="name-label">Departure *</label>
+                        <input class="" type="text" id="departure" name="departure" required />
+                    </div>
+                    <div>
+                        <label for="destination" id="email-label">Destination *</label>
+                        <input class="" type="text" id="destination" name="destination" required />
+                    </div>
+                    <div>
+                        <label for="date" id="number-label">Date *</label>
+                        <input class="" type="date" id="date" name="date"  required />
+                    </div>
+                    <div>
+                        <label for="train_id" id="number-label">Train ID *</label>
+                        <input class="" type="number" id="train_id" name="train_id" required />
+                    </div>
+                    <div>
+                        <label for="ticket_type">Ticket Type *</label>
+                        <select id="ticket_type" name="ticket_type" class="m-t-xs">
+                            <option value="First AC Class" selected>First AC Class</option>
+                            <option value="Second AC Class">Second AC Class</option>
+                            <option value="Third AC Class">Third AC Class</option>
+                            <option value="Economic Class">Economic Class</option>
+                            <option value="Sleeper Class">Sleeper Class</option>
+                            <option value="General">General</option>
+                        </select>
+                    </div>
+                    <button id="submit" type="submit" class="btn">Book Now</button>
+                </form>
+            </div>
+        </div>
+    </main>
 </body>
+
 </html>
